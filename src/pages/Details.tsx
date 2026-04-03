@@ -20,7 +20,7 @@ function Details() {
 
   let { details_id } = useParams();
   const [detail_loading, set_detail_loading] = useState<boolean>(true);
-  const DETAIL_MOVIE_API: string = `https://yts.mx/api/v2/movie_details.json?movie_id=${details_id}&with_cast=true`;
+  const DETAIL_MOVIE_API: string = `https://movies-api.accel.li/api/v2/movie_details.json?movie_id=${details_id}&with_cast=true`;
   const [detail_movie_data, set_detail_movie_data] = useState<Home_movie>();
   const details_movie_fetch = async () => {
     const response = await fetch(DETAIL_MOVIE_API);
